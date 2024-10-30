@@ -58,56 +58,113 @@
 			"name": "Stacks",
 			"item": [
 				{
-					"name": "PoX Rewards",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_rewards.amount\",\r\n            \"stacks_pox_rewards.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_rewards.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_rewards.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "PoX",
+					"item": [
+						{
+							"name": "PoX Rewards",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_rewards.amount\",\r\n            \"stacks_pox_rewards.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_rewards.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_rewards.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_rest}}/load",
+									"host": [
+										"{{base_url_rest}}"
+									],
+									"path": [
+										"load"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "{{base_url_rest}}/load",
-							"host": [
-								"{{base_url_rest}}"
-							],
-							"path": [
-								"load"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Stacked STX simple",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx.cycle\",\r\n            \"stacks_stacked_stx.sender_address\"\r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+						{
+							"name": "Stacked STX simple",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx.cycle\",\r\n            \"stacks_stacked_stx.sender_address\"\r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_rest}}/load",
+									"host": [
+										"{{base_url_rest}}"
+									],
+									"path": [
+										"load"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "{{base_url_rest}}/load",
-							"host": [
-								"{{base_url_rest}}"
-							],
-							"path": [
-								"load"
-							]
+						{
+							"name": "PoX Burnt",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_burnt.amount\",\r\n            \"stacks_pox_burnt.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_burnt.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_burnt.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_rest}}/load",
+									"host": [
+										"{{base_url_rest}}"
+									],
+									"path": [
+										"load"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Stacked STX Details",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx_details.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx_details.cycle\",\r\n            \"stacks_stacked_stx_details.pox_addr\",\r\n            \"stacks_stacked_stx_details.contract_id\",\r\n            \"stacks_stacked_stx_details.stacking_type\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_stacked_stx_details.cycle\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"90\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_rest}}/load",
+									"host": [
+										"{{base_url_rest}}"
+									],
+									"path": [
+										"load"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
 					"name": "Tokens",
@@ -162,6 +219,32 @@
 					"response": []
 				},
 				{
+					"name": "Oracle Prices",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_oracle_prices.price\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"stacks_oracle_prices.tx_date\",\r\n                \"dateRange\": \"last 1 days\",\r\n                \"granularity\": \"hour\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_oracle_prices.token\"\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url_rest}}/load",
+							"host": [
+								"{{base_url_rest}}"
+							],
+							"path": [
+								"load"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Latest Block",
 					"request": {
 						"method": "POST",
@@ -169,58 +252,6 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url_rest}}/load",
-							"host": [
-								"{{base_url_rest}}"
-							],
-							"path": [
-								"load"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Stacked STX Details",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx_details.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx_details.cycle\",\r\n            \"stacks_stacked_stx_details.pox_addr\",\r\n            \"stacks_stacked_stx_details.contract_id\",\r\n            \"stacks_stacked_stx_details.stacking_type\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_stacked_stx_details.cycle\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"90\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url_rest}}/load",
-							"host": [
-								"{{base_url_rest}}"
-							],
-							"path": [
-								"load"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PoX Burnt",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_burnt.amount\",\r\n            \"stacks_pox_burnt.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_burnt.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_burnt.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
