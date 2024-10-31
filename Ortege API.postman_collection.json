@@ -167,6 +167,63 @@
 					]
 				},
 				{
+					"name": "Zest",
+					"item": [
+						{
+							"name": "Positions",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_dapp_zest_positions.adjusted_amount\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_dapp_zest_positions.sender_address\",\r\n            \"stacks_dapp_zest_positions.asset_id\",\r\n            \"stacks_dapp_zest_positions.tx_type\",\r\n            \"stacks_dapp_zest_positions.asset_price\"\r\n\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions.sender_address\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\r\n                    \"SP1GDA6DQ953AFSX06SZBZ5CRT1Y1YKD7RQ3MY9TM\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_rest}}/load",
+									"host": [
+										"{{base_url_rest}}"
+									],
+									"path": [
+										"load"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Positions Net",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_dapp_zest_positions_net.total_supply\",\r\n            \"stacks_dapp_zest_positions_net.total_supply_usd\",\r\n            \"stacks_dapp_zest_positions_net.total_borrow\",\r\n            \"stacks_dapp_zest_positions_net.total_borrow_usd\",\r\n            \"stacks_dapp_zest_positions_net.total_repaid\",\r\n            \"stacks_dapp_zest_positions_net.total_repaid_usd\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_dapp_zest_positions_net.lender_address\",\r\n            \"stacks_dapp_zest_positions_net.asset_id\"\r\n\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions_net.lender_address\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\r\n                    \"SP1GDA6DQ953AFSX06SZBZ5CRT1Y1YKD7RQ3MY9TM\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_rest}}/load",
+									"host": [
+										"{{base_url_rest}}"
+									],
+									"path": [
+										"load"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Tokens",
 					"request": {
 						"method": "POST",
@@ -225,7 +282,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_oracle_prices.price\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"stacks_oracle_prices.tx_date\",\r\n                \"dateRange\": \"last 1 days\",\r\n                \"granularity\": \"hour\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_oracle_prices.token\"\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_oracle_prices.price\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"stacks_oracle_prices.tx_date\",\r\n                \"dateRange\": \"last 2 hours\",\r\n                \"granularity\": \"hour\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_oracle_prices.token\"\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
