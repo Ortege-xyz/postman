@@ -8,10 +8,1198 @@
 	},
 	"item": [
 		{
-			"name": "Bitcoin",
+			"name": "Staging",
 			"item": [
 				{
-					"name": "L2 Transactions",
+					"name": "Move Eco",
+					"item": [
+						{
+							"name": "Aptos",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"aptos.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Sui",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"sui.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Solana",
+					"item": [
+						{
+							"name": "Latest Block",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"solana.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_rest}}/load",
+									"host": [
+										"{{base_url_rest}}"
+									],
+									"path": [
+										"load"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Bitcoin Eco",
+					"item": [
+						{
+							"name": "Litecoin",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"litecoin.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Doge",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"dogecoin.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Bitcoin Cash",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"bitcoin_cash.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Bitcoin",
+							"item": [
+								{
+									"name": "L2 Transactions",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwt_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"bitcoin_l2_tx.amount\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"bitcoin_l2_tx.address\",\r\n            \"bitcoin_l2_tx.bitcoin_script\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"bitcoin_l2_tx.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            },\r\n                        {\r\n                \"dimension\": \"bitcoin_l2_tx.block_number\",\r\n                \"operator\": \"lte\",\r\n                \"values\": [\r\n                    \"860000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Stacks",
+							"item": [
+								{
+									"name": "PoX",
+									"item": [
+										{
+											"name": "PoX Rewards",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_rewards.amount\",\r\n            \"stacks_pox_rewards.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_rewards.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_rewards.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Stacked STX simple",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx.cycle\",\r\n            \"stacks_stacked_stx.sender_address\"\r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "PoX Burnt",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_burnt.amount\",\r\n            \"stacks_pox_burnt.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_burnt.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_burnt.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Stacked STX Details",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx_details.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx_details.cycle\",\r\n            \"stacks_stacked_stx_details.pox_addr\",\r\n            \"stacks_stacked_stx_details.contract_id\",\r\n            \"stacks_stacked_stx_details.stacking_type\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_stacked_stx_details.cycle\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"90\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Zest",
+									"item": [
+										{
+											"name": "Positions",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_dapp_zest_positions.adjusted_amount\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_dapp_zest_positions.sender_address\",\r\n            \"stacks_dapp_zest_positions.asset_id\",\r\n            \"stacks_dapp_zest_positions.tx_type\",\r\n            \"stacks_dapp_zest_positions.asset_price\"\r\n\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions.sender_address\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\r\n                    \"SP9DGFSPRX40H5BS19RHNCQXSFC1H6Z7PCFNW17C\"\r\n                ]\r\n            },\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions.tx_type\",\r\n                \"operator\": \"notEquals\",\r\n                \"values\": [\r\n                    \"mint\", \"burn\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Positions Net",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_dapp_zest_positions_net.total_supply\",\r\n            \"stacks_dapp_zest_positions_net.total_supply_usd\",\r\n            \"stacks_dapp_zest_positions_net.total_borrow\",\r\n            \"stacks_dapp_zest_positions_net.total_borrow_usd\",\r\n            \"stacks_dapp_zest_positions_net.total_repaid\",\r\n            \"stacks_dapp_zest_positions_net.total_repaid_usd\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_dapp_zest_positions_net.lender_address\",\r\n            \"stacks_dapp_zest_positions_net.asset_id\"\r\n\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions_net.lender_address\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\r\n                    \"SP1GDA6DQ953AFSX06SZBZ5CRT1Y1YKD7RQ3MY9TM\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Tokens",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_tokens.name\",\r\n            \"stacks_tokens.symbol\",\r\n            \"stacks_tokens.decimals\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_tokens.name\",\r\n                \"operator\": \"set\"\r\n            }\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Contract Calls",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_contract_calls.fee\",\r\n            \"stacks_contract_calls.asset_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_contract_calls.contract_id\",\r\n            \"stacks_contract_calls.function_name\"\r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Oracle Prices",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_oracle_prices.price\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"stacks_oracle_prices.tx_date\",\r\n                \"dateRange\": \"last 2 hours\",\r\n                \"granularity\": \"hour\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_oracle_prices.token\"\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Wallet Transactions",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_wallet_tx.gas_paid\",\r\n            \"stacks_wallet_tx.transaction_count\",\r\n            \"stacks_wallet_tx.dapp_count\",\r\n            \"stacks_wallet_tx.active_days\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"stacks_wallet_tx.tx_date\",\r\n                \"dateRange\": \"last 12 months\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_wallet_tx.sender_address\"\r\n        ],\r\n        \"filters\": [],\r\n        \"order\": {\r\n            \"stacks_wallet_tx.active_days\": \"desc\"\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "EVM Eco",
+					"item": [
+						{
+							"name": "Polygon",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"polygon.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Optimism",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"optimism.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Fantom",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"fantom.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Cronos",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"cronos.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Avalanche",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"avalanche.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Ethereum",
+							"item": [
+								{
+									"name": "Transactions",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"ethereum_transactions.count\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"ethereum.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Arbitrum",
+							"item": [
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"arbitrum.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Get Metadata",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url_rest}}/meta",
+									"host": [
+										"{{base_url_rest}}"
+									],
+									"path": [
+										"meta"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Prod",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Get Metadata",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url_rest}}/meta",
+									"host": [
+										"{{base_url_rest}}"
+									],
+									"path": [
+										"meta"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Bitcoin Eco",
+					"item": [
+						{
+							"name": "Bitcoin",
+							"item": [
+								{
+									"name": "L2 Transactions",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwt_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"bitcoin_l2_tx.amount\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"bitcoin_l2_tx.address\",\r\n            \"bitcoin_l2_tx.bitcoin_script\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"bitcoin_l2_tx.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            },\r\n                        {\r\n                \"dimension\": \"bitcoin_l2_tx.block_number\",\r\n                \"operator\": \"lte\",\r\n                \"values\": [\r\n                    \"860000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Stacks",
+							"item": [
+								{
+									"name": "PoX",
+									"item": [
+										{
+											"name": "PoX Rewards",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_rewards.amount\",\r\n            \"stacks_pox_rewards.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_rewards.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_rewards.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Stacked STX simple",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx.cycle\",\r\n            \"stacks_stacked_stx.sender_address\"\r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "PoX Burnt",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_burnt.amount\",\r\n            \"stacks_pox_burnt.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_burnt.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_burnt.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Stacked STX Details",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx_details.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx_details.cycle\",\r\n            \"stacks_stacked_stx_details.pox_addr\",\r\n            \"stacks_stacked_stx_details.contract_id\",\r\n            \"stacks_stacked_stx_details.stacking_type\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_stacked_stx_details.cycle\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"90\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Zest",
+									"item": [
+										{
+											"name": "Positions",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_dapp_zest_positions.adjusted_amount\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_dapp_zest_positions.sender_address\",\r\n            \"stacks_dapp_zest_positions.asset_id\",\r\n            \"stacks_dapp_zest_positions.tx_type\",\r\n            \"stacks_dapp_zest_positions.asset_price\"\r\n\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions.sender_address\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\r\n                    \"SP9DGFSPRX40H5BS19RHNCQXSFC1H6Z7PCFNW17C\"\r\n                ]\r\n            },\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions.tx_type\",\r\n                \"operator\": \"notEquals\",\r\n                \"values\": [\r\n                    \"mint\", \"burn\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Positions Net",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_dapp_zest_positions_net.total_supply\",\r\n            \"stacks_dapp_zest_positions_net.total_supply_usd\",\r\n            \"stacks_dapp_zest_positions_net.total_borrow\",\r\n            \"stacks_dapp_zest_positions_net.total_borrow_usd\",\r\n            \"stacks_dapp_zest_positions_net.total_repaid\",\r\n            \"stacks_dapp_zest_positions_net.total_repaid_usd\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_dapp_zest_positions_net.lender_address\",\r\n            \"stacks_dapp_zest_positions_net.asset_id\"\r\n\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions_net.lender_address\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\r\n                    \"SP1GDA6DQ953AFSX06SZBZ5CRT1Y1YKD7RQ3MY9TM\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url_rest}}/load",
+													"host": [
+														"{{base_url_rest}}"
+													],
+													"path": [
+														"load"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Tokens",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_tokens.name\",\r\n            \"stacks_tokens.symbol\",\r\n            \"stacks_tokens.decimals\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_tokens.name\",\r\n                \"operator\": \"set\"\r\n            }\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Contract Calls",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_contract_calls.fee\",\r\n            \"stacks_contract_calls.asset_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_contract_calls.contract_id\",\r\n            \"stacks_contract_calls.function_name\"\r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Oracle Prices",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_oracle_prices.price\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"stacks_oracle_prices.tx_date\",\r\n                \"dateRange\": \"last 2 hours\",\r\n                \"granularity\": \"hour\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_oracle_prices.token\"\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Latest Block",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_rest}}/load",
+											"host": [
+												"{{base_url_rest}}"
+											],
+											"path": [
+												"load"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Prices",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -24,16 +1212,46 @@
 							]
 						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"bitcoin_l2_tx.amount\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"bitcoin_l2_tx.address\",\r\n            \"bitcoin_l2_tx.bitcoin_script\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"bitcoin_l2_tx.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            },\r\n                        {\r\n                \"dimension\": \"bitcoin_l2_tx.block_number\",\r\n                \"operator\": \"lte\",\r\n                \"values\": [\r\n                    \"860000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"prices.avg_price\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"prices.timedate\",\r\n                \"dateRange\": \"last 3 days\",\r\n                \"granularity\": \"day\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"prices.symbol\"\r\n        ],\r\n        \"filters\": [\r\n\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url_rest}}/load",
+							"host": [
+								"{{base_url_rest}}"
+							],
+							"path": [
+								"load"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dApps",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"dapps_dl.avg_tvl\",\r\n            \"dapps_dl.avg_mcap\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"dapps_dl.snapshot_timedate\",\r\n                \"dateRange\": \"last 7 days\",\r\n                \"granularity\": \"day\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"dapps_dl.symbol\",\r\n            \"dapps_dl.name\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"dapps_dl.chain\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\"Stacks\"]\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -53,380 +1271,6 @@
 					"response": []
 				}
 			]
-		},
-		{
-			"name": "Stacks",
-			"item": [
-				{
-					"name": "PoX",
-					"item": [
-						{
-							"name": "PoX Rewards",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_rewards.amount\",\r\n            \"stacks_pox_rewards.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_rewards.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_rewards.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url_rest}}/load",
-									"host": [
-										"{{base_url_rest}}"
-									],
-									"path": [
-										"load"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Stacked STX simple",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx.cycle\",\r\n            \"stacks_stacked_stx.sender_address\"\r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url_rest}}/load",
-									"host": [
-										"{{base_url_rest}}"
-									],
-									"path": [
-										"load"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "PoX Burnt",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_pox_burnt.amount\",\r\n            \"stacks_pox_burnt.amount_usd\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_pox_burnt.cycle\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_pox_burnt.block_number\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"850000\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url_rest}}/load",
-									"host": [
-										"{{base_url_rest}}"
-									],
-									"path": [
-										"load"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Stacked STX Details",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_stacked_stx_details.stacked_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_stacked_stx_details.cycle\",\r\n            \"stacks_stacked_stx_details.pox_addr\",\r\n            \"stacks_stacked_stx_details.contract_id\",\r\n            \"stacks_stacked_stx_details.stacking_type\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_stacked_stx_details.cycle\",\r\n                \"operator\": \"gte\",\r\n                \"values\": [\r\n                    \"90\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url_rest}}/load",
-									"host": [
-										"{{base_url_rest}}"
-									],
-									"path": [
-										"load"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Zest",
-					"item": [
-						{
-							"name": "Positions",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_dapp_zest_positions.adjusted_amount\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_dapp_zest_positions.sender_address\",\r\n            \"stacks_dapp_zest_positions.asset_id\",\r\n            \"stacks_dapp_zest_positions.tx_type\",\r\n            \"stacks_dapp_zest_positions.asset_price\"\r\n\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions.sender_address\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\r\n                    \"SP1GDA6DQ953AFSX06SZBZ5CRT1Y1YKD7RQ3MY9TM\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url_rest}}/load",
-									"host": [
-										"{{base_url_rest}}"
-									],
-									"path": [
-										"load"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Positions Net",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_dapp_zest_positions_net.total_supply\",\r\n            \"stacks_dapp_zest_positions_net.total_supply_usd\",\r\n            \"stacks_dapp_zest_positions_net.total_borrow\",\r\n            \"stacks_dapp_zest_positions_net.total_borrow_usd\",\r\n            \"stacks_dapp_zest_positions_net.total_repaid\",\r\n            \"stacks_dapp_zest_positions_net.total_repaid_usd\"\r\n        ],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_dapp_zest_positions_net.lender_address\",\r\n            \"stacks_dapp_zest_positions_net.asset_id\"\r\n\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_dapp_zest_positions_net.lender_address\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\r\n                    \"SP1GDA6DQ953AFSX06SZBZ5CRT1Y1YKD7RQ3MY9TM\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url_rest}}/load",
-									"host": [
-										"{{base_url_rest}}"
-									],
-									"path": [
-										"load"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Tokens",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [],\r\n        \"timeDimensions\": [],\r\n        \"dimensions\": [\r\n            \"stacks_tokens.name\",\r\n            \"stacks_tokens.symbol\",\r\n            \"stacks_tokens.decimals\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"stacks_tokens.name\",\r\n                \"operator\": \"set\"\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url_rest}}/load",
-							"host": [
-								"{{base_url_rest}}"
-							],
-							"path": [
-								"load"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Contract Calls",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_contract_calls.fee\",\r\n            \"stacks_contract_calls.asset_amount\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_contract_calls.contract_id\",\r\n            \"stacks_contract_calls.function_name\"\r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url_rest}}/load",
-							"host": [
-								"{{base_url_rest}}"
-							],
-							"path": [
-								"load"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Oracle Prices",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks_oracle_prices.price\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"stacks_oracle_prices.tx_date\",\r\n                \"dateRange\": \"last 2 hours\",\r\n                \"granularity\": \"hour\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"stacks_oracle_prices.token\"\r\n        ],\r\n        \"filters\": []\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url_rest}}/load",
-							"host": [
-								"{{base_url_rest}}"
-							],
-							"path": [
-								"load"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Latest Block",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"stacks.latest_block\"\r\n        ],\r\n        \"timeDimensions\": [\r\n        ],\r\n        \"dimensions\": [\r\n            \r\n        ],\r\n        \"filters\": [\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url_rest}}/load",
-							"host": [
-								"{{base_url_rest}}"
-							],
-							"path": [
-								"load"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Get Metadata",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{jwt_token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{base_url_rest}}/meta",
-					"host": [
-						"{{base_url_rest}}"
-					],
-					"path": [
-						"meta"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Prices",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{jwt_token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"prices.avg_price\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"prices.timedate\",\r\n                \"dateRange\": \"last 3 days\",\r\n                \"granularity\": \"day\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"prices.symbol\"\r\n        ],\r\n        \"filters\": [\r\n\r\n        ]\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{base_url_rest}}/load",
-					"host": [
-						"{{base_url_rest}}"
-					],
-					"path": [
-						"load"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "dApps",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{jwt_token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"query\": {\r\n        \"measures\": [\r\n            \"dapps_dl.avg_tvl\",\r\n            \"dapps_dl.avg_mcap\"\r\n        ],\r\n        \"timeDimensions\": [\r\n            {\r\n                \"dimension\": \"dapps_dl.snapshot_timedate\",\r\n                \"dateRange\": \"last 7 days\",\r\n                \"granularity\": \"day\"\r\n            }\r\n        ],\r\n        \"dimensions\": [\r\n            \"dapps_dl.symbol\",\r\n            \"dapps_dl.name\"\r\n        ],\r\n        \"filters\": [\r\n            {\r\n                \"dimension\": \"dapps_dl.chain\",\r\n                \"operator\": \"equals\",\r\n                \"values\": [\"Stacks\"]\r\n            }\r\n        ]\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{base_url_rest}}/load",
-					"host": [
-						"{{base_url_rest}}"
-					],
-					"path": [
-						"load"
-					]
-				}
-			},
-			"response": []
 		}
 	],
 	"auth": {
